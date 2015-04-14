@@ -4,6 +4,8 @@ This is the sample app used during an introduction to Spring Boot (conference fo
 
 We start from scratch and generate a secured web application that exposes a domain object (`Speaker`) as a REST endpoint.
 
+NOTE: You can bootstrap a simple web-based project at https://start.spring.io
+
 === Running the app locally
 
 There are many ways to start your Spring Boot app locally:
