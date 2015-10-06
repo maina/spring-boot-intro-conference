@@ -14,7 +14,7 @@ There are many ways to start your Spring Boot app locally:
 * On the command-line, execute `mvn spring-boot:run`
 * Package the project (`mvn package`) and _just_ execute the jar, that is `java -jar target/spring-boot-intro-conference-0.0.1-SNAPSHOT.jar`
 
-The H2 database is empty but you can use curl to initialize it; to create a new `Speaker`, just _POST_ the following document to your local repository:
+The H2 database has some default speakers created via `import.sql`. You can use curl to add more; to create a new `Speaker`, just _POST_ the following document to your local repository:
 
 ```json
 {
