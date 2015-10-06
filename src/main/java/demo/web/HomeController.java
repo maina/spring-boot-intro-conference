@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-	@Value("${conference.name:confess}")
+	@Value("${conference.name:World}")
 	private String conference;
 
 	@RequestMapping("/")

@@ -20,7 +20,7 @@ public class SpeakerRepositoryTest {
 
 	@Test
 	public void testFindByTwitter() throws Exception {
-		Speaker dave = repository.save(new Speaker("Dave", "Syer", "david_syer"));
-		assertThat(repository.findByTwitter("david_syer").getId(), is(dave.getId()));
+		Speaker matt = repository.save(new Speaker("Matt", "Stine", "mstine"));
+		assertThat(repository.findByTwitter("mstine").getId(), is(matt.getId()));
 	}
 }

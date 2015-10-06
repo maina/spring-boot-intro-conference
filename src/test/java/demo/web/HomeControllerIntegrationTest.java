@@ -26,7 +26,7 @@ public class HomeControllerIntegrationTest {
 	public void runAndInvokeHome() {
 		String url = "http://localhost:" + port + "/";
 		String body = new TestRestTemplate("hero", "hero").getForObject(url, String.class);
-		assertThat(body, is("Hello confess"));
+		assertThat(body, is("Hello World"));
 
 	}
 
