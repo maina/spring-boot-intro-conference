@@ -11,6 +11,6 @@ public interface SpeakerRepository extends CrudRepository<Speaker, Long> {
 	@RestResource(path = "by-twitter")
 	Speaker findByTwitter(@Param("id") String twitter);
 
-	Collection<Speaker> findByLastName(String lastName);
+	Collection<Speaker> findByLastName(@Param("name") String lastName);
 
 }

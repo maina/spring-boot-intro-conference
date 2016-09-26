@@ -1,18 +1,17 @@
 package demo.domain;
 
-import demo.DemoApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = DemoApplication.class)
+@DataJpaTest
 public class SpeakerRepositoryTest {
 
 	@Autowired
@@ -20,7 +19,7 @@ public class SpeakerRepositoryTest {
 
 	@Test
 	public void testFindByTwitter() throws Exception {
-		Speaker matt = repository.save(new Speaker("Matt", "Stine", "mstine"));
-		assertThat(repository.findByTwitter("mstine").getId(), is(matt.getId()));
+		Speaker john = repository.save(new Speaker("John", "Smith", "jsmith"));
+		assertThat(repository.findByTwitter("jsmith").getId(), is(john.getId()));
 	}
 }
